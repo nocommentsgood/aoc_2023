@@ -8,20 +8,20 @@ pub fn cube_condundrum(puzzle: &str) -> u32 {
     let sanit = sanit.replace("reen", "");
     let sanit = sanit.replace("ed", "");
     let sanit = sanit.replace("lue", "");
-    let sanit = sanit.replace(" ", "");
-    let sanit = sanit.replace(";", ",");
+    let sanit = sanit.replace(' ', "");
+    let sanit = sanit.replace(' ', ",");
 
     let v: Vec<&str> = sanit.lines().collect();
 
-    for i in 0..v.len() {
+    (0..v.len()).for_each(|i| {
         let mut red = 0;
         let mut green = 0;
         let mut blue = 0;
-        let game_index = v[i].find(":");
+        let game_index = v[i].find(':');
 
         if game_index.is_some() {
             let (id, puz) = v[i].split_at(game_index.unwrap());
-            let puz = puz.replace(":", "");
+            let puz = puz.replace(':', "");
 
             'rep: for cube in puz.split(',') {
                 let (num, color) = cube.split_at(cube.len() - 1);
@@ -46,7 +46,7 @@ pub fn cube_condundrum(puzzle: &str) -> u32 {
                 }
             }
         }
-    }
+    });
 
     sum
 }
