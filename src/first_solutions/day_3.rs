@@ -6,6 +6,7 @@
 // is adjacent to exactly that one number
 // as well as each number having a length of 3
 
+#![allow(unused)]
 pub fn gear_ratio_solution(input: &str) -> u32 {
     let mut sum = 0;
 

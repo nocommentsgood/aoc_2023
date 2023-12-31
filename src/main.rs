@@ -1,4 +1,4 @@
-use crate::first_solutions::{day_1::trebuchet, day_2::cube_condundrum, day_3::gear_ratio_solution, day_4::scratchcard_solution};
+use crate::first_solutions::{day_1::trebuchet, day_2::cube_condundrum, day_3::gear_ratio_solution, day_4::scratchcard_solution, day_5::seed_fertilizer};
 use std::fs;
 
 pub mod first_solutions;
@@ -18,6 +18,10 @@ fn main() {
     // print!("{}", gear_ratio_solution(gear_puzzle.as_str()));
 
     // day 4
-    let scratchcard_puzzle = fs::read_to_string("/home/clushh/rust/aoc_2023/src/puzzles/scratchcard_puzzle.txt").unwrap();
-    print!("{}", scratchcard_solution(scratchcard_puzzle.as_str()));
+    // let scratchcard_puzzle = fs::read_to_string("/home/clushh/rust/aoc_2023/src/puzzles/scratchcard_puzzle.txt").unwrap();
+    // print!("{}", scratchcard_solution(scratchcard_puzzle.as_str()));
+
+    // day 5
+    let seed_puzzle = fs::read_to_string("/home/clushh/rust/aoc_2023/src/puzzles/day_5_seed_fertilizer").unwrap();
+    seed_fertilizer(seed_puzzle.as_str());
 }
