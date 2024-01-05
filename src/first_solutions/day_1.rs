@@ -5,14 +5,14 @@ pub fn trebuchet(puzzle: &str) -> u32 {
 
     for line in puzzle.lines() {
         for c in line.chars() {
-            if c.is_digit(10) {
+            if c.is_ascii_digit() {
                 first = char::to_digit(c, 10).unwrap();
                 break;
             }
         }
 
         for c in line.chars().rev() {
-            if c.is_digit(10) {
+            if c.is_ascii_digit() {
                 last = char::to_digit(c, 10).unwrap();
                 break;
             }
